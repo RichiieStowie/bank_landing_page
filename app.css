@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2%;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+}
+.nav-items {
+  list-style-type: none;
+  color: darkgray;
+}
+#special-btn {
+  min-width: 15%;
+  padding: 10px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(125, 209, 148),
+    rgb(112, 196, 189)
+  );
+  cursor: pointer;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  width: 100%;
+  justify-content: space-around;
+  background-color: hsl(0%, 0%, 98%);
+}
+.background-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+h1 {
+  font-size: 2.5em;
+  color: darkslategray;
+}
+h3 {
+  font-size: 1.5em;
+  color: darkgray;
+}
+.bank-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 3%;
+  background-image: linear-gradient(to bottom, rgb(209, 202, 202), whitesmoke);
+}
+.bank-service h1 {
+  padding: 2%;
+}
+.specific-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3%;
+}
+.services h2 {
+  padding: 2%;
+  font-weight: lighter;
+}
+.services h4 {
+  color: lightgray;
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+.written-articles {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5%;
+  background-color: whitesmoke;
+}
+.written-articles h2 {
+  margin: 2%;
+}
+.current-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.article {
+  padding: 2%;
+  height: 100%;
+  width: 80%;
+  display: block;
+  border: 1px solid whitesmoke;
+  object-fit: contain;
+  background-color: white;
+}
+.article h3 {
+  padding: 3%;
+  font-size: 0.6em;
+  font-weight: bold;
+}
+.article h4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: lightgray;
+}
+span {
+  font-size: 1.5em;
+  padding: 3%;
+  font-weight: bolder;
+  color: black;
+}
+
+footer {
+  background-color: darkslateblue;
+  padding: 3%;
+  width: 100%;
+}
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.row2 {
+  align-items: center;
+}
+.row2 h3,
+.row3 h3 {
+  margin: 3%;
+  font-size: 1em;
+  padding: 5%;
+}
+.request {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.submit-btn {
+  min-width: 120px;
+  max-width: 240px;
+  padding: 3%;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(125, 209, 148),
+    rgb(112, 196, 189)
+  );
+  cursor: pointer;
+}
+@media screen and (min-width: 376px) {
+  .burger-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .nav-list {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 9px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+  #special-btn {
+    display: none;
+  }
+  footer img {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 12px;
+    text-align: center;
+  }
+  .navbar {
+    overflow-y: hidden;
+  }
+  .burger-icon {
+    display: unset;
+    cursor: pointer;
+    margin-right: 3%;
+  }
+  .nav-list {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: transform o.3s ease-in;
+  }
+  .nav-active {
+    transform: translateX(0%);
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .background-image {
+    height: 20vh;
+    width: 80vw;
+  }
+  .background-info {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .background-info h3 {
+    padding: 5%;
+  }
+  .bank-service {
+    display: flex;
+    flex-direction: column;
+  }
+  .specific-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services {
+    align-items: center;
+  }
+  .written-articles {
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .written-articles h2 {
+    text-align: center;
+  }
+  .current-articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact h3 {
+    font-size: 0.8em;
+  }
+}
